@@ -1,5 +1,5 @@
 /*----------------------------------  
-Global Stlyes
+Global Styles
 ------------------------------------*/
 * {
 	margin: 0;
@@ -18,9 +18,37 @@ html {
 }
 
 body {
-	font-family: "Titillium Web", "Open Sans", sans-serif;
+	/* Background pattern from Subtle Patterns */
+	background: url('../img/ignasi_pattern_s.png');
+	font-family: "Roboto", "Open Sans", sans-serif;
 	/*one Em roughly ten pixels (16 x 62.5% = 10)*/
 	font-size: 62.5%;
 	letter-spacing: 1.5px;
 	margin: 0;
+	text-align: center;
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin: 4em;
+}
+
+ul > li {
+	list-style: none;
+}
+
+/*----------------------------------  
+Header
+------------------------------------*/
+
+h1 {
+	font-size: 6em;
+	padding-bottom: 0.5em;
+}
+
+p {
+	font-size: 2em;
 }
