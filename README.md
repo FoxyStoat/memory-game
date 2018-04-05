@@ -2,7 +2,7 @@
 
 Project 3 for Front End Nano Degree
 
-This is a project from Udacity [repo link](https://github.com/udacity/fend-project-memory-game)
+This is a project from Udacity here is the [repo link](https://github.com/udacity/fend-project-memory-game)
 
 ## Project Specifications
 
