@@ -52,3 +52,19 @@ h1 {
 p {
 	font-size: 2em;
 }
+
+/*----------------------------------  
+Section - Score Panel
+------------------------------------*/
+
+.score-panel {
+  display: flex;
+  justify-content: space-between;
+  padding: 2em;
+  font-size: 2em;
+  width: 25%;
+}
+
+.star-rating > li {
+  display: inline-block;
+}
