@@ -70,26 +70,26 @@ Section - Score Panel
 }
 
 /*----------------------------------  
-Cards
+Deck of Cards
 ------------------------------------*/
-
+/*Mobile first responsivness*/
 .deck {
   background: linear-gradient(to right, #56ccf2, #2f80ed);
   border-radius: 2em;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 700px;
-    padding: 3em;
-    max-width: 660px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  width: 30em;
+  height: 30em;
 }
 
 .card {
-    background: #f2c94c;
-    border-radius: 4em;
-    cursor: pointer;
-    height: 140px;
-    padding: 1em;
-    width: 140px;
+  background: #f2c94c;
+  border-radius: 2em;
+  cursor: pointer;
+  height: 6em;
+  padding: 1em;
+  width: 6em;
 }
