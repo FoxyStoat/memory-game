@@ -58,15 +58,27 @@ Section - Score Panel
 ------------------------------------*/
 
 .score-panel {
-  display: flex;
-  justify-content: space-between;
+	font-size: 1.8em;
   padding: 2em;
-  font-size: 2em;
-  width: 25%;
 }
 
 .star-rating > li {
   display: inline-block;
+  /*color: #2f80ed;*/
+  padding: 0.5em;
+}
+
+.moves-counter {
+	padding: 0.5em;
+}
+
+.reset-btn {
+	background: #000;
+	border-radius: 1em;
+	border: none;
+	color: #fff;
+	margin-top: 1em;
+	padding: 1em;
 }
 
 /*----------------------------------  
