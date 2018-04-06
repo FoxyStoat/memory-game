@@ -40,6 +40,11 @@ ul > li {
 	list-style: none;
 }
 
+.card,
+.reset-btn {
+    cursor: pointer;
+}
+
 /*----------------------------------  
 Header
 ------------------------------------*/
