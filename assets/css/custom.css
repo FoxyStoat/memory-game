@@ -86,7 +86,7 @@ Deck of Cards
 ------------------------------------*/
 /*Mobile first responsivness*/
 .deck {
-  background: linear-gradient(to right, #56ccf2, #2f80ed);
+  background: linear-gradient(to bottom, #56ccf2, #2f80ed);
   border-radius: 2em;
   display: flex;
   flex-wrap: wrap;
@@ -104,4 +104,23 @@ Deck of Cards
   height: 6em;
   padding: 1em;
   width: 6em;
+}
+
+/*---------------------------------- 
+Media Queries
+------------------------------------*/
+
+/*--Tablets-------------------------*/
+
+@media screen and (min-width: 550px) {
+	.deck  {
+		height: 50em;
+		padding: 2em;
+		width: 50em;
+	}
+
+	.card {
+		height: 10em;
+		width: 10em;
+	}
 }
