@@ -97,9 +97,10 @@ Deck of Cards
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  height: 30em;
+  margin-bottom: 6em;
   padding: 1em;
   width: 30em;
-  height: 30em;
 }
 
 .card {
@@ -108,6 +109,11 @@ Deck of Cards
   height: 6em;
   padding: 1em;
   width: 6em;
+}
+
+.deck,
+.card {
+	box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
 }
 
 /*---------------------------------- 
