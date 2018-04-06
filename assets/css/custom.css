@@ -100,7 +100,6 @@ Deck of Cards
 .card {
   background: #f2c94c;
   border-radius: 2em;
-  cursor: pointer;
   height: 6em;
   padding: 1em;
   width: 6em;
@@ -113,6 +112,7 @@ Media Queries
 /*--Tablets-------------------------*/
 
 @media screen and (min-width: 550px) {
+
 	.deck  {
 		height: 50em;
 		padding: 2em;
@@ -122,5 +122,33 @@ Media Queries
 	.card {
 		height: 10em;
 		width: 10em;
+	}
+}
+
+/*---------------------------------- 
+Desktops
+------------------------------------*/
+@media screen and (min-width: 800px) {
+	
+	h1 {
+		font-size: 6em;
+	}
+
+	p {
+		font-size: 2em;
+	}
+
+	.deck  {
+		height: 70em;
+		width: 70em;
+	}
+
+	.card {
+		height: 15em;
+		width: 15em;
+	}
+
+	.reset-btn {
+		font-size: 0.8em;
 	}
 }
