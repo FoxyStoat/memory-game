@@ -92,28 +92,26 @@ Deck of Cards
 /*Mobile first responsivness*/
 .deck {
   background: linear-gradient(to bottom, #56ccf2, #2f80ed);
-  border-radius: 2em;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   height: 30em;
   margin-bottom: 6em;
-  padding: 1em;
   width: 30em;
 }
 
 .card {
   background: #f2c94c;
-  border-radius: 2em;
   height: 6em;
-  padding: 1em;
   width: 6em;
 }
 
 .deck,
 .card {
+	border-radius: 2em;
 	box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+	padding: 1em;
 }
 
 /*---------------------------------- 
