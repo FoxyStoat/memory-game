@@ -95,30 +95,29 @@ Deck of Cards
   background: linear-gradient(to bottom, #56ccf2, #2f80ed);
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  height: 30em;
+  height: 35em;
   margin-bottom: 6em;
-  width: 30em;
+  padding: 0.5em;
+  width: 35em;
 }
 
 .card {
   background: #f2c94c;
-  height: 6em;
-  width: 6em;
+  height: 7em;
+  width: 7em;
 }
-
 
 .deck,
 .card {
 	border-radius: 2em;
 	box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
-	padding: 0.5em;
 }
 
-	.card-img {
-		width: 5em;
-	}
+.card-img {
+	width: 6em;
+}
 
 /*---------------------------------- 
 Media Queries
