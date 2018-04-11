@@ -108,6 +108,7 @@ Deck of Cards
   width: 6em;
 }
 
+
 .deck,
 .card {
 	border-radius: 2em;
@@ -157,6 +158,10 @@ Desktops
 		height: 15em;
 		width: 15em;
 	}
+
+	.card-img {
+	width: 13em;
+}
 
 	.reset-btn {
 		font-size: 0.8em;
