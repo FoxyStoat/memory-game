@@ -110,12 +110,12 @@ Deck of Cards
 }
 
 .card-img {
-	width:6em;
+	width: 6em;
 }
 
 .deck,
 .card {
-	border-radius: 2em;
+	border-radius: 1.5em;
 	box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
 }
 /*---------------------------------- 
