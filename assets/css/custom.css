@@ -111,6 +111,7 @@ Deck of Cards
 
 .card-img {
 	width: 6em;
+	opacity: 0;
 }
 
 .deck,
