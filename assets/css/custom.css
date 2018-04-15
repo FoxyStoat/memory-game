@@ -109,9 +109,9 @@ Deck of Cards
   width: 7em;
 }
 
-.card-img {
+.deck img {
 	width: 6em;
-	opacity: 0;
+	/*opacity: 0;*/
 }
 
 .deck,
@@ -138,7 +138,7 @@ Media Queries
 		width: 10em;
 	}
 
-	.card-img {
+	.deck img {
 		width: 9em;
 	}
 }
@@ -166,8 +166,8 @@ Desktops
 		width: 15em;
 	}
 
-	.card-img {
-	width: 13em;
+	.deck img {
+		width: 13em;
 }
 
 	.reset-btn {
