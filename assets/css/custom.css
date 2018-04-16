@@ -55,6 +55,12 @@ h1 {
 	padding-bottom: 0.5em;
 }
 
+h2 {
+	font-size: 3em;
+	font-weight: 400;
+	padding-bottom: 0.5em;
+}
+
 p {
 	font-size: 1.6em;
 }
