@@ -119,6 +119,25 @@ Deck of Cards
 	border-radius: 1.5em;
 	box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
 }
+
+/*---------------------------------- 
+Footer
+------------------------------------*/
+.footer {
+	color: #666;
+	margin-bottom: 2em;
+}
+
+.footer > p {
+	font-size: 1em;
+	padding: 1em;
+}
+
+.footer a:link,
+.footer a:visited {
+	color: #2f80ed;
+	text-decoration: none;
+}
 /*---------------------------------- 
 Media Queries
 ------------------------------------*/
