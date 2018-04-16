@@ -25,15 +25,12 @@ const shuffledDeck = shuffle(deckCards);
 		const liTag = document.querySelector(".card");
 		// Create the <img> tags
 		const addImage = document.createElement("IMG");
- 		// Append img to <li>
+ 		// Append <img> to <li>
 		liTag.appendChild(addImage);
 		// Set the img src path with the shuffled deck
 		addImage.setAttribute("src", "assets/img/" + shuffledDeck[i]);
 		// Access the <ul> with class of .deck
 		const deck = document.querySelector(".deck");
-		// Append <img> tags to <li>
-		liTag.appendChild(addImage);
 		// Update the new <li> to the deck <ul>
 		deck.appendChild(liTag);
 	}
-	// console.log(shuffledDeck);
