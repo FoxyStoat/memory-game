@@ -4,6 +4,10 @@ Project 3 for Front End Nano Degree
 
 This is a project from Udacity here is the [repo link](https://github.com/udacity/fend-project-memory-game)
 
+## Licensing For Fallout Images
+
+All Images are taken from [GamePedia Wiki Pages](http://fallout.wikia.com/wiki/Category:Vault_Boy_images) for the Fallout Games.  The images original source are created and owned by Bethesda Softworks.  The use of these images is believed to qualify as fair use for the purpose of creative work only.
+
 ## Project Specifications
 
 
