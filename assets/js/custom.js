@@ -17,23 +17,23 @@ function shuffle(array) {
 
 // Store new shuffled array to a new variable and call shuffle()
 const shuffledDeck = shuffle(deckCards);
-// TODO: Create <li> tags and <img> tags and append
-// to the deck <ul> with the new shuffled content 
+// TODO: Create <img> tags and append
+// to <li> then add to deck <ul> with the new shuffled content 
 // Iterate over deck of cards array
-	for (let i = 0; i < deckCards.length; i++) {
-		// Create the <li> tags
-		const liTag = document.createElement('LI');
-		// Give <li> class of card
-		liTag.classList.add('card');
+	for (let i = 0; i < shuffledDeck.length; i++) {
+		// Access the <li> with class of .card
+		const liTag = document.querySelector(".card");
 		// Create the <img> tags
-		const addImage = document.createElement('IMG');
-		// Append img to <li>
+		const addImage = document.createElement("IMG");
+ 		// Append img to <li>
 		liTag.appendChild(addImage);
 		// Set the img src path with the shuffled deck
-		addImage.setAttribute('src', 'assets/img/' + shuffledDeck[i]);
+		addImage.setAttribute("src", "assets/img/" + shuffledDeck[i]);
 		// Access the <ul> with class of .deck
-		const deck = document.querySelector('.deck');
-		// Append <li> tags along with <img> tags to the deck <ul>
+		const deck = document.querySelector(".deck");
+		// Append <img> tags to <li>
+		liTag.appendChild(addImage);
+		// Update the new <li> to the deck <ul>
 		deck.appendChild(liTag);
-  	} // End Of For Loop
-console.log(deckCards);
+	}
+	// console.log(shuffledDeck);
