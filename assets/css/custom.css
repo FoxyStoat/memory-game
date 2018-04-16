@@ -123,6 +123,7 @@ Deck of Cards
 /*---------------------------------- 
 Footer
 ------------------------------------*/
+
 .footer {
 	color: #666;
 	margin-bottom: 2em;
@@ -138,12 +139,12 @@ Footer
 	color: #2f80ed;
 	text-decoration: none;
 }
+
 /*---------------------------------- 
 Media Queries
 ------------------------------------*/
 
 /*--Tablets-------------------------*/
-
 @media screen and (min-width: 550px) {
 
 	.deck  {
@@ -187,9 +188,13 @@ Desktops
 
 	.deck img {
 		width: 13em;
-}
+	}
 
 	.reset-btn {
 		font-size: 0.8em;
+	}
+
+	.footer {
+		font-size: 1.2em;
 	}
 }
