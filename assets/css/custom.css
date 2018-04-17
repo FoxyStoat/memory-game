@@ -117,7 +117,7 @@ Deck of Cards
 
 .deck img {
 	width: 6em;
-	/*opacity: 0;*/
+	display: none;
 }
 
 .deck,
