@@ -36,3 +36,10 @@ const shuffledDeck = shuffle(deckCards);
 		// Update the new <li> to the deck <ul>
 		deck.appendChild(liTag);
 	}
+
+// Event Listener for if a card is clicked (add flip class)
+deck.addEventListener('click', function(evt) {      
+  if(evt.target.nodeName === "LI"){
+    console.log("I was clicked " + evt.target.nodeName);
+  }
+});
