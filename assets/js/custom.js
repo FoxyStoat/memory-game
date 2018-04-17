@@ -1,5 +1,8 @@
 // Array of Deck of Card Images
 const deckCards = ["Agility.png", "Agility.png", "Boat.png", "Boat.png", "Citizenship.png", "Citizenship.png", "Hack.png", "Hack.png", "Nerd-Rage.png", "Nerd-Rage.png", "Nuka-Cola.png", "Nuka-Cola.png", "Robotics.png", "Robotics.png", "Shock.png", "Shock.png"];
+// Access the <ul> with class of .deck
+const deck = document.querySelector(".deck");
+
 
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
@@ -31,8 +34,6 @@ const shuffledDeck = shuffle(deckCards);
 		addImage.setAttribute("src", "assets/img/" + shuffledDeck[i]);
 		// Add an alt tag to the image
 		addImage.setAttribute("alt", "image of vault boy from fallout")
-		// Access the <ul> with class of .deck
-		const deck = document.querySelector(".deck");
 		// Update the new <li> to the deck <ul>
 		deck.appendChild(liTag);
 	}
