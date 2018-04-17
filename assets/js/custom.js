@@ -3,7 +3,6 @@ const deckCards = ["Agility.png", "Agility.png", "Boat.png", "Boat.png", "Citize
 // Access the <ul> with class of .deck
 const deck = document.querySelector(".deck");
 
-
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
     let currentIndex = array.length, temporaryValue, randomIndex;
@@ -38,9 +37,10 @@ const shuffledDeck = shuffle(deckCards);
 		deck.appendChild(liTag);
 	}
 
-// Event Listener for if a card is clicked (add flip class)
-deck.addEventListener('click', function(evt) {      
+//TODO: Event Listener if a card is clicked (add flip class to show img)
+deck.addEventListener("click", function(evt) {      
   if(evt.target.nodeName === "LI") {
     console.log(evt.target.nodeName + " Was clicked");
+    evt.target.classList.add("flip");
   }
 });
