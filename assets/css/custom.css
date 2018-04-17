@@ -109,21 +109,27 @@ Deck of Cards
   width: 35em;
 }
 
+.deck,
+.card {
+	border-radius: 1.5em;
+	box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+}
+
 .card {
 	background: #f2c94c;
-  height: 7em;
+	height: 7em;
   width: 7em;
 }
 
 .deck img {
 	width: 6em;
+	padding: 0.5em;
 	display: none;
 }
 
-.deck,
-.card {
-	border-radius: 1.5em;
-	box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+.deck .card.flip {
+	background: #fff;
+	cursor: default;
 }
 
 /*---------------------------------- 
