@@ -41,6 +41,7 @@ const shuffledDeck = shuffle(deckCards);
 deck.addEventListener("click", function(evt) {      
   if(evt.target.nodeName === "LI") {
     console.log(evt.target.nodeName + " Was clicked");
+    //when <li> is clicked add the class .flip to show img
     evt.target.classList.add("flip");
   }
 });
