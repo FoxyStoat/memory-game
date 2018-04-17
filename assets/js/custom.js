@@ -29,6 +29,8 @@ const shuffledDeck = shuffle(deckCards);
 		liTag.appendChild(addImage);
 		// Set the img src path with the shuffled deck
 		addImage.setAttribute("src", "assets/img/" + shuffledDeck[i]);
+		// Add an alt tag to the image
+		addImage.setAttribute("alt", "image of vault boy from fallout")
 		// Access the <ul> with class of .deck
 		const deck = document.querySelector(".deck");
 		// Update the new <li> to the deck <ul>
