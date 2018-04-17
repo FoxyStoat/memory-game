@@ -33,14 +33,14 @@ const shuffledDeck = shuffle(deckCards);
 		// Set the img src path with the shuffled deck
 		addImage.setAttribute("src", "assets/img/" + shuffledDeck[i]);
 		// Add an alt tag to the image
-		addImage.setAttribute("alt", "image of vault boy from fallout")
+		addImage.setAttribute("alt", "image of vault boy from fallout");
 		// Update the new <li> to the deck <ul>
 		deck.appendChild(liTag);
 	}
 
 // Event Listener for if a card is clicked (add flip class)
 deck.addEventListener('click', function(evt) {      
-  if(evt.target.nodeName === "LI"){
-    console.log("I was clicked " + evt.target.nodeName);
+  if(evt.target.nodeName === "LI") {
+    console.log(evt.target.nodeName + " Was clicked");
   }
 });
