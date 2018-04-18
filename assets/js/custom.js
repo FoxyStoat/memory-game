@@ -46,17 +46,29 @@ to <li> then add to deck <ul> with the new shuffled content
 TODO: Event Listener if a card is clicked
 (add flip class to show the img)
 */
-var myEvent = deck.addEventListener("click", function(evt) {
-  if(evt.target.nodeName === "LI") {
-  	// To console if I was clicking the correct element 
-  	console.log(evt.target.nodeName + " Was clicked");
-  	// Call flipCard function
-    flipCard();
-  }
+deck.addEventListener("click", function(evt) {
+	if(evt.target.nodeName === "LI") {
+	// To console if I was clicking the correct element 
+	console.log(evt.target.nodeName + " Was clicked");
+	// Call flipCard function
+	flipCard();
+	addToOpened();
+}
 
 	//TODO: Flip the card and display cards img
 	function flipCard() {
 		// When <li> is clicked add the class .flip to show img
 		evt.target.classList.add("flip");	  
 		}
+
+	//TODO: Add the fliped cards to the empty array of opened
+	function addToOpened() {
+		/* If the opened array has zero or one other img push another 
+		img into the array so we can compare these two to be match
+		*/
+		if (opened.length === 0 || opened.length === 1) {
+			opened.push(evt.target.firstElementChild);
+		}
+	}
+	console.log(opened);
 }); //Event Listener
