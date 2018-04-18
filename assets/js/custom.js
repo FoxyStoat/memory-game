@@ -1,26 +1,29 @@
 // Array of Deck of Card Images
 const deckCards = ["Agility.png", "Agility.png", "Boat.png", "Boat.png", "Citizenship.png", "Citizenship.png", "Hack.png", "Hack.png", "Nerd-Rage.png", "Nerd-Rage.png", "Nuka-Cola.png", "Nuka-Cola.png", "Robotics.png", "Robotics.png", "Shock.png", "Shock.png"];
+// Global Arrays
 // Access the <ul> with class of .deck
 const deck = document.querySelector(".deck");
 
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
-    let currentIndex = array.length, temporaryValue, randomIndex;
+  let currentIndex = array.length, temporaryValue, randomIndex;
 
-    while (currentIndex !== 0) {
-        randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex -= 1;
-        temporaryValue = array[currentIndex];
-        array[currentIndex] = array[randomIndex];
-        array[randomIndex] = temporaryValue;
-    }
-    return array;
+  while (currentIndex !== 0) {
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
+      temporaryValue = array[currentIndex];
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = temporaryValue;
+  }
+  return array;
 }
 
 // Store new shuffled array to a new variable and call shuffle()
 const shuffledDeck = shuffle(deckCards);
-// TODO: Create <img> tags and append
-// to <li> then add to deck <ul> with the new shuffled content 
+/* 
+TODO: Create <img> tags and append
+to <li> then add to deck <ul> with the new shuffled content
+*/ 
 // Iterate over deck of cards array
 	for (let i = 0; i < shuffledDeck.length; i++) {
 		// Access the <li> with class of .card
@@ -37,11 +40,21 @@ const shuffledDeck = shuffle(deckCards);
 		deck.appendChild(liTag);
 	}
 
-//TODO: Event Listener if a card is clicked (add flip class to show img)
-deck.addEventListener("click", function(evt) {      
+/*
+TODO: Event Listener if a card is clicked
+(add flip class to show the img)
+*/
+var myEvent = deck.addEventListener("click", function(evt) {
   if(evt.target.nodeName === "LI") {
-    console.log(evt.target.nodeName + " Was clicked");
-    //when <li> is clicked add the class .flip to show img
-    evt.target.classList.add("flip");
+  	// To console if I was clicking the correct element 
+  	console.log(evt.target.nodeName + " Was clicked");
+  	// Call flipCard function
+    flipCard();
   }
-});
+
+	//TODO: Flip the card and display cards img
+	function flipCard() {
+		// When <li> is clicked add the class .flip to show img
+		evt.target.classList.add("flip");	  
+		}
+}); //Event Listener
