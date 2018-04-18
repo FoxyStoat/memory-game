@@ -65,7 +65,7 @@ deck.addEventListener("click", function(evt) {
 		// When <li> is clicked add the class .flip to show img
 		evt.target.classList.add("flip");	  
 		}
-
+	 
 	//TODO: Add the fliped cards to the empty array of opened
 	function addToOpened() {
 		/* If the opened array has zero or one other img push another 
@@ -75,11 +75,11 @@ deck.addEventListener("click", function(evt) {
 			// Push that img to opened array
 			opened.push(evt.target.firstElementChild);
 		}
-		// If there are two cards open
-  	if (opened.length === 2) {
-  		// Disable any further mouse clicks on other cards
-  		document.body.style.pointerEvents = "none";
-  	}
+		// If there are two cards open in the opened array
+		if (opened.length === 2) {
+			// Disable any further mouse clicks on other cards
+			document.body.style.pointerEvents = "none";
+		}
 	}
 
 	/*
@@ -87,11 +87,31 @@ deck.addEventListener("click", function(evt) {
 	*/
 	function compareTwo() {
 		if (opened.length === 2 && opened[0].src === opened[1].src) {
-      console.log("It's a Match!!");
-      } else {
-      console.log("NO Match")
-      }
+			// If matched call match()
+			match();
+			console.log("It's a Match!");
+		} else {
+			console.log("NO Match!")
+		}
 	}
+
+	/*
+	TODO: If the two cards match, keep the cards open and
+	apply class of match
+	*/ 
+	function match() {
+		/* Acess the two cards in opened array and add
+		the class of match to the imgages parent: the <li> tag
+		*/
+		opened[0].parentElement.classList.add("match");
+		opened[1].parentElement.classList.add("match");
+		// Push the matched cards to the matched array
+		matched.push(opened);
+		// Clear the opened array
+		opened = [];
+	}
+
+	// Debugging console.logs
 	console.log(matched);
 	console.log(opened);
 }); //Event Listener
