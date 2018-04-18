@@ -3,6 +3,8 @@ const deckCards = ["Agility.png", "Agility.png", "Boat.png", "Boat.png", "Citize
 // Global Arrays
 // Access the <ul> with class of .deck
 const deck = document.querySelector(".deck");
+// Create an empty array to store the opened cards
+let opened = [];
 
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
