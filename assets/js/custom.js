@@ -69,6 +69,11 @@ deck.addEventListener("click", function(evt) {
 		if (opened.length === 0 || opened.length === 1) {
 			opened.push(evt.target.firstElementChild);
 		}
+		// If there are two cards open
+  	if (opened.length === 2) {
+  		// Disable any further mouse clicks on other cards
+  		document.body.style.pointerEvents = "none";
+  	}
 	}
 	console.log(opened);
 }); //Event Listener
