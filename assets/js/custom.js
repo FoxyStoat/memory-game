@@ -5,6 +5,8 @@ const deckCards = ["Agility.png", "Agility.png", "Boat.png", "Boat.png", "Citize
 const deck = document.querySelector(".deck");
 // Create an empty array to store the opened cards
 let opened = [];
+// Create an empty array to store the matched cards
+let matched = [];
 
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
