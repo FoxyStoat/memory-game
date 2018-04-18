@@ -43,8 +43,8 @@ to <li> then add to deck <ul> with the new shuffled content
 	}
 
 /*
-TODO: Event Listener if a card is clicked
-(add flip class to show the img)
+TODO: Event Listener if a card <li> is clicked
+call flipCard() and call addToOpened()
 */
 deck.addEventListener("click", function(evt) {
 	if(evt.target.nodeName === "LI") {
