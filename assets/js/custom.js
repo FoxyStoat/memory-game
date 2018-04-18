@@ -52,9 +52,12 @@ deck.addEventListener("click", function(evt) {
 	if(evt.target.nodeName === "LI") {
 	// To console if I was clicking the correct element 
 	console.log(evt.target.nodeName + " Was clicked");
-	// Call flipCard function
+	// Call flipCard() function
 	flipCard();
+	// Call addToOpened() function
 	addToOpened();
+	// Call compareTwo() function
+	compareTwo();
 }
 
 	//TODO: Flip the card and display cards img
@@ -69,6 +72,7 @@ deck.addEventListener("click", function(evt) {
 		img into the array so we can compare these two to be match
 		*/
 		if (opened.length === 0 || opened.length === 1) {
+			// Push that img to opened array
 			opened.push(evt.target.firstElementChild);
 		}
 		// If there are two cards open
@@ -77,5 +81,17 @@ deck.addEventListener("click", function(evt) {
   		document.body.style.pointerEvents = "none";
   	}
 	}
+
+	/*
+	TODO: Compare two cards to see if they match or not
+	*/
+	function compareTwo() {
+		if (opened.length === 2 && opened[0].src === opened[1].src) {
+      console.log("It's a Match!!");
+      } else {
+      console.log("NO Match")
+      }
+	}
+	console.log(matched);
 	console.log(opened);
 }); //Event Listener
