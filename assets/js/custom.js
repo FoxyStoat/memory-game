@@ -54,8 +54,6 @@ deck.addEventListener("click", function(evt) {
 	console.log(evt.target.nodeName + " Was clicked");
 	// Call flipCard() function
 	flipCard();
-	// Call compareTwo() function
-	compareTwo();
 }
 
 	//TODO: Flip the card and display cards img
@@ -80,6 +78,8 @@ deck.addEventListener("click", function(evt) {
 			// Disable any further mouse clicks on other cards
 			document.body.style.pointerEvents = "none";
 		}
+		// Call compareTwo() function
+		compareTwo();
 	}
 
 	/*
