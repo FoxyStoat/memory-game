@@ -54,8 +54,6 @@ deck.addEventListener("click", function(evt) {
 	console.log(evt.target.nodeName + " Was clicked");
 	// Call flipCard() function
 	flipCard();
-	// Call addToOpened() function
-	addToOpened();
 	// Call compareTwo() function
 	compareTwo();
 }
@@ -63,7 +61,9 @@ deck.addEventListener("click", function(evt) {
 	//TODO: Flip the card and display cards img
 	function flipCard() {
 		// When <li> is clicked add the class .flip to show img
-		evt.target.classList.add("flip");	  
+		evt.target.classList.add("flip");
+		// Call addToOpened() function
+		addToOpened();	  
 		}
 	 
 	//TODO: Add the fliped cards to the empty array of opened
@@ -92,6 +92,8 @@ deck.addEventListener("click", function(evt) {
 			console.log("It's a Match!");
 		} else {
 			console.log("NO Match!")
+			// If No match call noMatch()
+			noMatch();
 		}
 	}
 
@@ -100,7 +102,7 @@ deck.addEventListener("click", function(evt) {
 	apply class of match
 	*/ 
 	function match() {
-		/* Acess the two cards in opened array and add
+		/* Access the two cards in opened array and add
 		the class of match to the imgages parent: the <li> tag
 		*/
 		opened[0].parentElement.classList.add("match");
