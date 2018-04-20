@@ -46,10 +46,10 @@ to <li> then add to deck <ul> with the new shuffled content
 
 /*
 TODO: Event Listener if a card <li> is clicked
-call flipCard() and call addToOpened()
+call flipCard()
 */
 deck.addEventListener("click", function(evt) {
-	if(evt.target.nodeName === "LI") {
+	if (evt.target.nodeName === "LI") {
 	// To console if I was clicking the correct element 
 	console.log(evt.target.nodeName + " Was clicked");
 	// Call flipCard() function
@@ -108,7 +108,6 @@ function match() {
 	matched.push(opened);
 	// Clear the opened array
 	opened = [];
-	togglePointerEvt();
 }
 
 /*
@@ -123,7 +122,6 @@ function noMatch() {
 		// Remove class flip on images parent element
 		opened[0].parentElement.classList.remove("flip");
 		opened[1].parentElement.classList.remove("flip");
-
 		// Remove the cards from opened array
 		opened = [];
 	}, 1000);
