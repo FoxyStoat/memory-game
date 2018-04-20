@@ -126,7 +126,7 @@ function noMatch() {
 		opened[1].parentElement.classList.remove("flip");
 		// Remove the cards from opened array
 		opened = [];
-	}, 1000);
+	}, 700);
 }
 
 // Debugging console.logs
