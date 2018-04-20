@@ -67,7 +67,7 @@ deck.addEventListener("click", function(evt) {
 	//TODO: Add the fliped cards to the empty array of opened
 	function addToOpened() {
 		/* If the opened array has zero or one other img push another 
-		img into the array so we can compare these two to be match
+		img into the array so we can compare these two to be matched
 		*/
 		if (opened.length === 0 || opened.length === 1) {
 			// Push that img to opened array
