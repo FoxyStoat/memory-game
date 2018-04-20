@@ -7,8 +7,8 @@ const deck = document.querySelector(".deck");
 let opened = [];
 // Create an empty array to store the matched cards
 let matched = [];
-// Create variable for moves counter
-let numberOfMoves = 0;
+// Create variable for moves counter, start the count at one
+let movesCount = 0;
 
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
@@ -110,6 +110,7 @@ function match() {
 	matched.push(opened);
 	// Clear the opened array
 	opened = [];
+	movesCounter();
 }
 
 /*
@@ -118,8 +119,8 @@ from the opened array and flip the cards back over by
 removing the flip class.
 */
 function noMatch() {
-	/* After about 1 second of the two cards open remove
-	flip class from the images parent element <li> */
+	/* After 700 miliseconds the two cards open will have
+	the class of flip removed from the images parent element <li> */
 	setTimeout(function() {
 		// Remove class flip on images parent element
 		opened[0].parentElement.classList.remove("flip");
@@ -127,6 +128,19 @@ function noMatch() {
 		// Remove the cards from opened array
 		opened = [];
 	}, 700);
+	// Call movesCounter to increment by one
+	movesCounter();
+}
+
+/*
+TODO: Increment the moves counter.  To be called at each
+comparison for every two cards compared add one to the count
+*/
+function movesCounter() {
+	// Select the class moves-counter and change it's HTML  
+	movesCount = document.querySelector(".moves-counter");
+	// Plus one move for every pair of cards checked
+	movesCount.innerHTML ++;
 }
 
 // Debugging console.logs
