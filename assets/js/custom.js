@@ -73,28 +73,28 @@ deck.addEventListener("click", function(evt) {
 			// Push that img to opened array
 			opened.push(evt.target.firstElementChild);
 		}
-		// If there are two cards open in the opened array
 		if (opened.length === 2) {
-			// Disable any further mouse clicks on other cards
-			document.body.style.pointerEvents = "none";
+      // Disable any further mouse clicks on other cards
+      document.body.style.pointerEvents = "none";
+			// Call compareTwo() function
+			compareTwo();
 		}
-		// Call compareTwo() function
-		compareTwo();
 	}
 
 	/*
 	TODO: Compare two cards to see if they match or not
 	*/
 	function compareTwo() {
+		// Compare the two images src
 		if (opened.length === 2 && opened[0].src === opened[1].src) {
 			// If matched call match()
 			match();
 			console.log("It's a Match!");
-		} else {
-			console.log("NO Match!")
+		} else if (opened.length === 2 && !opened[0].src === !opened[1].src) {
 			// If No match call noMatch()
 			noMatch();
-		}
+			console.log("NO Match!")
+		}	
 	}
 
 	/*
@@ -116,4 +116,5 @@ deck.addEventListener("click", function(evt) {
 	// Debugging console.logs
 	console.log(matched);
 	console.log(opened);
+	console.log(opened.length);
 }); //Event Listener
