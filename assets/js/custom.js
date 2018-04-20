@@ -73,12 +73,8 @@ deck.addEventListener("click", function(evt) {
 			// Push that img to opened array
 			opened.push(evt.target.firstElementChild);
 		}
-		if (opened.length === 2) {
-      // Disable any further mouse clicks on other cards
-      document.body.style.pointerEvents = "none";
-			// Call compareTwo() function
-			compareTwo();
-		}
+		// Call compareTwo() function
+		compareTwo();
 	}
 
 	/*
