@@ -64,7 +64,7 @@ deck.addEventListener("click", function(evt) {
 		evt.target.classList.add("flip");
 		// Call addToOpened() function
 		addToOpened();	  
-		}
+	}
 	 
 	//TODO: Add the fliped cards to the empty array of opened
 	function addToOpened() {
@@ -110,6 +110,7 @@ function match() {
 	matched.push(opened);
 	// Clear the opened array
 	opened = [];
+	// Call movesCounter to increment by one
 	movesCounter();
 }
 
