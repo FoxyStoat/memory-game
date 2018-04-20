@@ -76,58 +76,60 @@ deck.addEventListener("click", function(evt) {
 		// Call compareTwo() function
 		compareTwo();
 	}
-
-	/*
-	TODO: Compare two cards to see if they match or not
-	*/
-	function compareTwo() {
-		// Compare the two images src
-		if (opened.length === 2 && opened[0].src === opened[1].src) {
-			// If matched call match()
-			match();
-			console.log("It's a Match!");
-		} else if (opened.length === 2 && !opened[0].src === !opened[1].src) {
-			// If No match call noMatch()
-			noMatch();
-			console.log("NO Match!")
-		}	
-	}
-
-	/*
-	TODO: If the two cards match, keep the cards open and
-	apply class of match
-	*/ 
-	function match() {
-		/* Access the two cards in opened array and add
-		the class of match to the imgages parent: the <li> tag
-		*/
-		opened[0].parentElement.classList.add("match");
-		opened[1].parentElement.classList.add("match");
-		// Push the matched cards to the matched array
-		matched.push(opened);
-		// Clear the opened array
-		opened = [];
-	}
-
-	/*
-  TODO: If the two cards do not match, remove the cards
-  from the opened array and flip the cards back over by
-  removing the flip class.
-  */
-  function noMatch() {
-  	/* After about 1 second of the two cards open remove
-  	flip class from the images parent element <li> */
-    setTimeout(function() {
-    // Remove class flip on images parent element
-    opened[0].parentElement.classList.remove("flip");
-    opened[1].parentElement.classList.remove("flip");
-    // Remove the cards from opened array
-    opened = [];
-   }, 1000);
-  }
-
-	// Debugging console.logs
-	console.log(matched);
-	console.log(opened);
-	console.log(opened.length);
 }); //Event Listener
+
+/*
+TODO: Compare two cards to see if they match or not
+*/
+function compareTwo() {
+	// Compare the two images src
+	if (opened.length === 2 && opened[0].src === opened[1].src) {
+		// If matched call match()
+		match();
+		console.log("It's a Match!");
+	} else if (opened.length === 2 && !opened[0].src === !opened[1].src) {
+		// If No match call noMatch()
+		noMatch();
+		console.log("NO Match!");
+	}
+}
+
+/*
+TODO: If the two cards match, keep the cards open and
+apply class of match
+*/ 
+function match() {
+	/* Access the two cards in opened array and add
+	the class of match to the imgages parent: the <li> tag
+	*/
+	opened[0].parentElement.classList.add("match");
+	opened[1].parentElement.classList.add("match");
+	// Push the matched cards to the matched array
+	matched.push(opened);
+	// Clear the opened array
+	opened = [];
+	togglePointerEvt();
+}
+
+/*
+TODO: If the two cards do not match, remove the cards
+from the opened array and flip the cards back over by
+removing the flip class.
+*/
+function noMatch() {
+	/* After about 1 second of the two cards open remove
+	flip class from the images parent element <li> */
+	setTimeout(function() {
+		// Remove class flip on images parent element
+		opened[0].parentElement.classList.remove("flip");
+		opened[1].parentElement.classList.remove("flip");
+
+		// Remove the cards from opened array
+		opened = [];
+	}, 1000);
+}
+
+// Debugging console.logs
+console.log(matched);
+console.log(opened);
+console.log(opened.length);
