@@ -113,6 +113,23 @@ deck.addEventListener("click", function(evt) {
 		opened = [];
 	}
 
+	/*
+  TODO: If the two cards do not match, remove the cards
+  from the opened array and flip the cards back over by
+  removing the flip class.
+  */
+  function noMatch() {
+  	/* After about 1 second of the two cards open remove
+  	flip class from the images parent element <li> */
+    setTimeout(function() {
+    // Remove class flip on images parent element
+    opened[0].parentElement.classList.remove("flip");
+    opened[1].parentElement.classList.remove("flip");
+    // Remove the cards from opened array
+    opened = [];
+   }, 1000);
+  }
+
 	// Debugging console.logs
 	console.log(matched);
 	console.log(opened);
