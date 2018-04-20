@@ -7,6 +7,8 @@ const deck = document.querySelector(".deck");
 let opened = [];
 // Create an empty array to store the matched cards
 let matched = [];
+// Create variable for moves counter
+let numberOfMoves = 0;
 
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
