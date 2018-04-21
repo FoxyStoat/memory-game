@@ -202,11 +202,11 @@ Deck of Cards
 	background: #28e;
 	visibility: visible;
 	cursor: default;
+	animation: pulse 1s;
 }
 
 .match img {
 	background: #28e;
-		animation: pulse 1s;
 }
 
 @keyframes pulse {
