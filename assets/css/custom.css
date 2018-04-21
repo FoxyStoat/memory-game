@@ -103,7 +103,7 @@ https://www.w3schools.com/howto/howto_css_modals.asp
 
 /* Modal (background) */
 .modal {
-	display: none;
+	/*display: none;*/
 	position: fixed;
 	z-index: 99;
 	left: 0;
@@ -261,7 +261,7 @@ Desktops
 	}
 
 	p {
-		font-size: 2em;
+		font-size: 2.3em;
 	}
 
 	.deck  {
@@ -284,5 +284,14 @@ Desktops
 
 	.footer {
 		font-size: 1.2em;
+	}
+	
+	.modal-content h2 {
+		font-size: 5em;
+	}
+
+	/* Modal Image*/
+	.modal-img {
+		width: 30em;
 	}
 }
