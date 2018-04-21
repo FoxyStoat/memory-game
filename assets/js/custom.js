@@ -56,14 +56,14 @@ deck.addEventListener("click", function(evt) {
 	console.log(evt.target.nodeName + " Was clicked");
 	// Call flipCard() function
 	flipCard();
-}
+	}
 
 	//TODO: Flip the card and display cards img
 	function flipCard() {
 		// When <li> is clicked add the class .flip to show img
-		evt.target.classList.add("flip");
+		evt.target.classList.add("flip");	
 		// Call addToOpened() function
-		addToOpened();	  
+		addToOpened();  
 	}
 	 
 	//TODO: Add the fliped cards to the empty array of opened
@@ -112,6 +112,7 @@ function match() {
 	opened = [];
 	// Call movesCounter to increment by one
 	movesCounter();
+	winGame();
 }
 
 /*
@@ -144,7 +145,18 @@ function movesCounter() {
 	movesCount.innerHTML ++;
 }
 
+/*
+TODO: Check the length of the matched array and if there
+are 8 pairs then the game is won
+*/
+function winGame() {
+	if (matched.length >= 8) {
+		console.log("you have won");
+		// show the modal
+	}
+}
+
 // Debugging console.logs
-console.log(matched);
+console.log(matched.length);
 console.log(opened);
 console.log(opened.length);
