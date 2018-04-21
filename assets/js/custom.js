@@ -150,7 +150,7 @@ TODO: Check the length of the matched array and if there
 are 8 pairs then the game is won
 */
 function winGame() {
-	if (matched.length >= 8) {
+	if (matched.length === 8) {
 		console.log("you have won");
 		// show the modal
 	}
