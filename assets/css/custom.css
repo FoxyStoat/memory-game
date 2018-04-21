@@ -249,6 +249,10 @@ Media Queries
 	.deck img {
 		width: 9em;
 	}
+
+	.modal-content h2 {
+		font-size: 4em;
+	}
 }
 
 /*---------------------------------- 
