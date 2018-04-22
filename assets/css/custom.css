@@ -184,7 +184,7 @@ Deck of Cards
 
 .deck img {
 	width: 6em;
-	/*visibility: hidden;*/
+	visibility: hidden;
 }
 
 .deck .card.flip {
