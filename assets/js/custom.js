@@ -104,12 +104,14 @@ function match() {
 	/* Access the two cards in opened array and add
 	the class of match to the imgages parent: the <li> tag
 	*/
+	setTimeout(function() {
 	opened[0].parentElement.classList.add("match");
 	opened[1].parentElement.classList.add("match");
 	// Push the matched cards to the matched array
 	matched.push(opened[0, 1]);
 	// Clear the opened array
 	opened = [];
+}, 600);
 	// Call movesCounter to increment by one
 	movesCounter();
 	// Check to see if there are 8 matched cards
