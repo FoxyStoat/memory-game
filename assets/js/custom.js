@@ -6,7 +6,7 @@ const deck = document.querySelector(".deck");
 // Create an empty array to store the opened cards
 let opened = [];
 // Create an empty array to store the matched cards
-let matched = [];
+const matched = [];
 // Create variable for moves counter, start the count at one
 let movesCount = 0;
 
@@ -107,11 +107,12 @@ function match() {
 	opened[0].parentElement.classList.add("match");
 	opened[1].parentElement.classList.add("match");
 	// Push the matched cards to the matched array
-	matched.push(opened);
+	matched.push(opened[0, 1]);
 	// Clear the opened array
 	opened = [];
 	// Call movesCounter to increment by one
 	movesCounter();
+	// Check to see if there are 8 matched cards
 	winGame();
 }
 
@@ -152,8 +153,23 @@ are 8 pairs then the game is won
 function winGame() {
 	if (matched.length === 8) {
 		console.log("you have won");
-		// show the modal
+		// Display the modal
+		displayModal();
 	}
+}
+
+/*
+TODO: Display the modal on winning the game
+Help with the modal from:
+https://www.w3schools.com/howto/howto_css_modals.asp
+*/
+function displayModal() {
+	// Access the modal
+	const modal = document.getElementById("win-game-modal");
+	// Access the modal <span> element that closes the modal
+	const modalClose = document.querySelector("i.fa-close");
+	// When the game is won set modal to display block to show it
+	modal.style.display = "block";
 }
 
 // Debugging console.logs
