@@ -108,7 +108,8 @@ function match() {
 		opened[0].parentElement.classList.add("match");
 		opened[1].parentElement.classList.add("match");
 		// Push the matched cards to the matched array
-		matched.push(opened[0, 1]);
+		matched.push(...opened);
+		// matched.push(opened[0, 1]);
 		// Clear the opened array
 		opened = [];
 	}, 600);
@@ -169,11 +170,18 @@ function displayModal() {
 	// Access the modal
 	const modal = document.getElementById("win-game-modal");
 	// Access the modal <span> element that closes the modal
-	const modalClose = document.querySelector("i.fa-close");
+	const modalClose = document.getElementsByClassName("close")[0];
 	// When the game is won set modal to display block to show it
 	modal.style.display = "block";
-	// modalClose.onclick = function() {
- //    modal.style.display = "none";
+	// When the user clicks on <span> (x), close the modal
+	modalClose.onclick = function() {
+    modal.style.display = "none";
+  }
+  // When the user clicks anywhere outside of the modal, close it
+	window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
 }
 
 // Debugging console.logs
