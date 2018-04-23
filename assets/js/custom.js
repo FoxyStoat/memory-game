@@ -145,8 +145,9 @@ comparison for every two cards compared add one to the count
 function movesCounter() {
 	// Select the class moves-counter and change it's HTML  
 	let movesCounter = document.querySelector(".moves-counter");
-	// Plus one move for every pair of cards checked
+	// Update the html for the moves counter
 	movesCounter.innerHTML ++;
+	// Keep track of the number of moves for every pair checked
 	movesCount ++;
 }
 
