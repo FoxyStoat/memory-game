@@ -169,7 +169,7 @@ https://www.w3schools.com/howto/howto_css_modals.asp
 */
 function displayModal() {
 	// Access the modal
-	const modal = document.getElementById("win-game-modal");
+	const modal = document.getElementById("#win-game-modal");
 	// Access the modal <span> element that closes the modal
 	const modalClose = document.getElementsByClassName("close")[0];
 	// When the game is won set modal to display block to show it
@@ -177,13 +177,13 @@ function displayModal() {
 	// When the user clicks on <span> (x), close the modal
 	modalClose.onclick = function() {
     modal.style.display = "none";
-  }
+    }
   // When the user clicks anywhere outside of the modal, close it
 	window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
-  }
+	}
 }
 
 // Debugging console.logs
