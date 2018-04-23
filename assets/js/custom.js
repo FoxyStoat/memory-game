@@ -182,6 +182,7 @@ function displayModal() {
     if (event.target == modal) {
         modal.style.display = "none";
     }
+  }
 }
 
 // Debugging console.logs
