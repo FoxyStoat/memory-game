@@ -109,14 +109,13 @@ function match() {
 		opened[1].parentElement.classList.add("match");
 		// Push the matched cards to the matched array
 		matched.push(...opened);
-		// matched.push(opened[0, 1]);
+		// Check to see if there are 8 pairs of matched cards
+		winGame();
 		// Clear the opened array
 		opened = [];
 	}, 600);
 	// Call movesCounter to increment by one
 	movesCounter();
-	// Check to see if there are 8 matched cards
-	winGame();
 }
 
 /*
@@ -156,7 +155,7 @@ TODO: Check the length of the matched array and if there
 are 8 pairs then the game is won
 */
 function winGame() {
-	if (matched.length === 8) {
+	if (matched.length === 16) {
 		console.log("you have won");
 		// Display the modal
 		displayModal();
