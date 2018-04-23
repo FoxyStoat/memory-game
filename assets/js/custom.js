@@ -24,6 +24,7 @@ function shuffle(array) {
   return array;
 }
 
+function startGame() {
 // Store new shuffled array to a new variable and call shuffle()
 const shuffledDeck = shuffle(deckCards);
 /* 
@@ -31,7 +32,7 @@ TODO: Create <img> tags and append
 to <li> then add to deck <ul> with the new shuffled content
 */ 
 // Iterate over deck of cards array
-	for (let i = 0; i < shuffledDeck.length; i++) {
+	for (let i = 0; i < deckCards.length; i++) {
 		// Access the <li> with class of .card
 		const liTag = document.querySelector(".card");
 		// Create the <img> tags
@@ -39,12 +40,15 @@ to <li> then add to deck <ul> with the new shuffled content
  		// Append <img> to <li>
 		liTag.appendChild(addImage);
 		// Set the img src path with the shuffled deck
-		addImage.setAttribute("src", "assets/img/" + shuffledDeck[i]);
+		addImage.setAttribute("src", "assets/img/" + deckCards[i]);
 		// Add an alt tag to the image
 		addImage.setAttribute("alt", "image of vault boy from fallout");
 		// Update the new <li> to the deck <ul>
 		deck.appendChild(liTag);
 	}
+}
+
+	startGame();
 
 /*
 TODO: Event Listener if a card <li> is clicked
@@ -63,7 +67,7 @@ deck.addEventListener("click", function(evt) {
 		// When <li> is clicked add the class .flip to show img
 		evt.target.classList.add("flip");
 		// Call addToOpened() function
-		addToOpened();  
+		addToOpened();
 	}
 	 
 	//TODO: Add the fliped cards to the empty array of opened
@@ -171,13 +175,13 @@ function displayModal() {
 	// Access the modal
 	const modal = document.getElementById("#win-game-modal");
 	// Access the modal <span> element that closes the modal
-	const modalClose = document.getElementsByClassName("close")[0];
+	const modalClose = document.getElementsByClassName("close");
 	// When the game is won set modal to display block to show it
 	modal.style.display = "block";
 	// When the user clicks on <span> (x), close the modal
 	modalClose.onclick = function() {
     modal.style.display = "none";
-    }
+  }
   // When the user clicks anywhere outside of the modal, close it
 	window.onclick = function(event) {
     if (event.target == modal) {
