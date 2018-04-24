@@ -211,14 +211,14 @@ Deck of Cards
 }
 
 .deck .card.match {
-	background: #28e;
+	background: #39d;
 	visibility: visible;
 	cursor: default;
 	animation: pulse 1s;
 }
 
 .match img {
-	background: #28e;
+	background: #39d;
 }
 
 @keyframes pulse {
