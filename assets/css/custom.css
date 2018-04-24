@@ -20,7 +20,7 @@ html {
 body {
 	/* Background pattern from Subtle Patterns */
 	background: url('../img/ignasi_pattern_s.png');
-	font-family: "Roboto", "Open Sans", sans-serif;
+	font-family: "Open Sans", sans-serif;
 	/*one Em roughly ten pixels (16 x 62.5% = 10)*/
 	font-size: 62.5%;
 	letter-spacing: 1.5px;
