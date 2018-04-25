@@ -126,7 +126,7 @@ function match() {
 		opened[1].parentElement.classList.add("match");
 		// Push the matched cards to the matched array
 		matched.push(...opened);
-		// Check to see if there are 8 pairs of matched cards
+		// Check to see if the game has been won with all 8 pairs
 		winGame();
 		// Clear the opened array
 		opened = [];
@@ -169,11 +169,11 @@ function movesCounter() {
 
 /*
 TODO: Check the length of the matched array and if there
-are 8 pairs then the game is won
+are 8 pairs 16 cards alltogether then the game is won
 */
 function winGame() {
 	if (matched.length === 16) {
-		console.log("you have won");
+		// console.log("you have won");
 		// Display the modal
 		displayModal();
 	}
@@ -204,22 +204,22 @@ Help with the modal from:
 https://www.w3schools.com/howto/howto_css_modals.asp
 */
 function displayModal() {
-	// Access the modal
-	const modal = document.getElementById("#win-game-modal");
-	// Access the modal <span> element that closes the modal
-	const modalClose = document.getElementsByClassName("close");
-
+// Access the modal
+const modal = document.getElementById("modal");
+// Access the modal <span> element (x) that closes the modal
+const modalClose = document.getElementsByClassName("close")[0];
 	// When the game is won set modal to display block to show it
 	modal.style.display= "block";
 	// When the user clicks on <span> (x), close the modal
 	modalClose.onclick = function() {
-    modal.style.display = "none";
-  }
-  // When the user clicks anywhere outside of the modal, close it
+		modal.style.display = "none";
+	}
+
+// When the user clicks anywhere outside of the modal, close it
 	window.onclick = function(event) {
-  	if (event.target == modal) {
-      modal.style.display = "none";
-    }
+		if (event.target == modal) {
+			modal.style.display = "none";
+		}
 	}
 }
 
