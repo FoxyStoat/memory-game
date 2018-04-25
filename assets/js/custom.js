@@ -10,6 +10,14 @@ const matched = [];
 // Create variable for moves counter, start the count at one
 let movesCount = 0;
 
+// Get the span tag for the timer
+const timeCounter = document.querySelector(".timer");
+// Create variables for time count, start all at zero
+let minutes = 0;
+let seconds = 0;
+// For use in the click card event listener
+let timeStart = false;
+
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
   let currentIndex = array.length, temporaryValue, randomIndex;
@@ -25,14 +33,14 @@ function shuffle(array) {
 }
 
 function startGame() {
-// Store new shuffled array to a new variable and call shuffle()
-const shuffledDeck = shuffle(deckCards);
-/* 
-TODO: Create <img> tags and append
-to <li> then add to deck <ul> with the new shuffled content
-*/ 
-// Iterate over deck of cards array
-	for (let i = 0; i < deckCards.length; i++) {
+	// Store new shuffled array to a new variable and call shuffle()
+	const shuffledDeck = shuffle(deckCards);
+	/* 
+	TODO: Create <img> tags and append
+	to <li> then add to deck <ul> with the new shuffled content
+	*/ 
+	// Iterate over deck of cards array
+	for (let i = 0; i < shuffledDeck.length; i++) {
 		// Access the <li> with class of .card
 		const liTag = document.querySelector(".card");
 		// Create the <img> tags
@@ -40,15 +48,14 @@ to <li> then add to deck <ul> with the new shuffled content
  		// Append <img> to <li>
 		liTag.appendChild(addImage);
 		// Set the img src path with the shuffled deck
-		addImage.setAttribute("src", "assets/img/" + deckCards[i]);
+		addImage.setAttribute("src", "assets/img/" + shuffledDeck[i]);
 		// Add an alt tag to the image
 		addImage.setAttribute("alt", "image of vault boy from fallout");
 		// Update the new <li> to the deck <ul>
 		deck.appendChild(liTag);
 	}
 }
-
-	startGame();
+startGame();
 
 /*
 TODO: Event Listener if a card <li> is clicked
@@ -56,10 +63,16 @@ call flipCard()
 */
 deck.addEventListener("click", function(evt) {
 	if (evt.target.nodeName === "LI") {
-	// To console if I was clicking the correct element 
-	console.log(evt.target.nodeName + " Was clicked");
-	// Call flipCard() function
-	flipCard();
+		// To console if I was clicking the correct element 
+		console.log(evt.target.nodeName + " Was clicked");
+		// Start the timer after the first click of one card
+		// Executes the timer() function
+		if (timeStart === false) {
+			timeStart = true; 
+			timer();
+		}
+		// Call flipCard() function
+		flipCard();
 	}
 
 	//TODO: Flip the card and display cards img
@@ -167,6 +180,25 @@ function winGame() {
 }
 
 /*
+TODO: Update the timer in the HTML for minutes and seconds
+This timer() function is invoked in the event listener
+on the first card click
+Used: https://www.w3schools.com/js/js_timing.asp
+*/
+function timer() {
+	// Update the count every 1 second
+	setInterval(function() {
+		 seconds++;
+		 if (seconds === 60) {
+				minutes++;
+				seconds = 0;
+			}
+		// Update the timer in HTML with the time it takes the user to play the game
+		timeCounter.innerHTML = "<i class='fa fa-hourglass-start'></i>" + " Timer: " + minutes + " Mins " + seconds + " Secs" ;
+	}, 1000);
+}
+
+/*
 TODO: Display the modal on winning the game
 Help with the modal from:
 https://www.w3schools.com/howto/howto_css_modals.asp
@@ -176,16 +208,17 @@ function displayModal() {
 	const modal = document.getElementById("#win-game-modal");
 	// Access the modal <span> element that closes the modal
 	const modalClose = document.getElementsByClassName("close");
+
 	// When the game is won set modal to display block to show it
-	modal.style.display = "block";
+	modal.style.display= "block";
 	// When the user clicks on <span> (x), close the modal
 	modalClose.onclick = function() {
     modal.style.display = "none";
   }
   // When the user clicks anywhere outside of the modal, close it
 	window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
+  	if (event.target == modal) {
+      modal.style.display = "none";
     }
 	}
 }
