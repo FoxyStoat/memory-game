@@ -10,8 +10,10 @@ const matched = [];
 // Create variable for moves counter, start the count at one
 let movesCount = 0;
 
-// Get the span tag for the timer
+// Get the span tag for the timer.
 const timeCounter = document.querySelector(".timer");
+// To use this variable to stop the time started in timer
+let time;
 // Create variables for time count, start all at zero
 let minutes = 0;
 let seconds = 0;
@@ -169,12 +171,12 @@ function movesCounter() {
 
 /*
 TODO: Check the length of the matched array and if there
-are 8 pairs 16 cards alltogether then the game is won
+are 8 pairs 16 cards all together then the game is won.
+Stop the timer and show the modal
 */
 function winGame() {
 	if (matched.length === 16) {
-		// console.log("you have won");
-		// Display the modal
+		stopTime();
 		displayModal();
 	}
 }
@@ -187,15 +189,24 @@ Used: https://www.w3schools.com/js/js_timing.asp
 */
 function timer() {
 	// Update the count every 1 second
-	setInterval(function() {
-		 seconds++;
-		 if (seconds === 60) {
+	time = setInterval(function() {
+		seconds++;
+			if (seconds === 60) {
 				minutes++;
 				seconds = 0;
 			}
 		// Update the timer in HTML with the time it takes the user to play the game
 		timeCounter.innerHTML = "<i class='fa fa-hourglass-start'></i>" + " Timer: " + minutes + " Mins " + seconds + " Secs" ;
 	}, 1000);
+}
+
+/*
+TODO: Stop the timer once the user has matched
+all 16 cards, total of 8 pairs
+Used: https://www.w3schools.com/js/js_timing.asp
+*/
+function stopTime() {
+	clearInterval(time);
 }
 
 /*
@@ -224,6 +235,6 @@ const modalClose = document.getElementsByClassName("close")[0];
 }
 
 // Debugging console.logs
-console.log(matched.length);
-console.log(opened);
-console.log(opened.length);
+// console.log(matched.length);
+// console.log(opened);
+// console.log(opened.length);
