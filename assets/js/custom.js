@@ -135,6 +135,7 @@ function match() {
 	}, 600);
 	// Call movesCounter to increment by one
 	movesCounter();
+	starRating();
 }
 
 /*
@@ -154,6 +155,7 @@ function noMatch() {
 	}, 700);
 	// Call movesCounter to increment by one
 	movesCounter();
+	starRating();
 }
 
 /*
@@ -207,6 +209,23 @@ Used: https://www.w3schools.com/js/js_timing.asp
 */
 function stopTime() {
 	clearInterval(time);
+}
+
+/*
+TODO: Update the star rating.  Depending on the number of
+moves the user completes the game, the stars will decrease
+with the more moves the user takes.
+*/
+function starRating() {
+// Access the <ul> element for the star rating section and then the <li> elements within it
+const star = document.getElementById("star-rating").querySelectorAll(".star");
+  if (moves === 14) {
+  	// First element child is the <i> within the <li>
+  	star[2].firstElementChild.classList.remove("fa-star");
+  }
+  if (moves === 18) {
+  	star[1].firstElementChild.classList.remove("fa-star");
+  }
 }
 
 /*
