@@ -8,7 +8,7 @@ let opened = [];
 // Create an empty array to store the matched cards
 const matched = [];
 // Create variable for moves counter, start the count at one
-let movesCount = 0;
+let moves = 0;
 
 // Get the span tag for the timer.
 const timeCounter = document.querySelector(".timer");
@@ -68,7 +68,7 @@ deck.addEventListener("click", function(evt) {
 		// To console if I was clicking the correct element 
 		console.log(evt.target.nodeName + " Was clicked");
 		// Start the timer after the first click of one card
-		// Executes the timer() function
+	// Executes the timer() function
 		if (timeStart === false) {
 			timeStart = true; 
 			timer();
@@ -162,11 +162,11 @@ comparison for every two cards compared add one to the count
 */
 function movesCounter() {
 	// Select the class moves-counter and change it's HTML  
-	let movesCounter = document.querySelector(".moves-counter");
+	let movesCount = document.querySelector(".moves-counter");
 	// Update the html for the moves counter
-	movesCounter.innerHTML ++;
+	movesCount.innerHTML ++;
 	// Keep track of the number of moves for every pair checked
-	movesCount ++;
+	moves ++;
 }
 
 /*
