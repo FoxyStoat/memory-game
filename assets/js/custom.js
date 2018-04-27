@@ -179,6 +179,7 @@ Stop the timer and show the modal
 function winGame() {
 	if (matched.length === 16) {
 		stopTime();
+		AddStats();
 		displayModal();
 	}
 }
@@ -229,6 +230,31 @@ const star = document.getElementById("star-rating").querySelectorAll(".star");
 }
 
 /*
+TODO: Get stats on the time, how many moves, and star rating
+for the end game and update the modal with these stats
+*/
+function AddStats() {
+	// Access the modal content div
+	const stats = document.querySelector(".modal-content");
+	// Create three different paragraphs
+	for (let i = 1; i <= 3; i++) {
+		// Create a new Paragraph
+		const statsElement = document.createElement("p");
+		// Add a class to the new Paragraph
+		statsElement.classList.add("stats");
+		// Add the new created <p> tag to the modal content
+		stats.appendChild(statsElement);
+	}
+
+	// Select all p tags with the class of stats and update the content
+	var x = stats.querySelectorAll("p.stats");
+			// Set the new <p> to have the content of stats (time, moves and star rating)
+		x[0].innerHTML = "Time to complete: " + minutes + " Minutes and " + seconds + " Seconds";
+		x[1].innerHTML = "Moves Taken: " + moves;
+		x[2].innerHTML = "Your Star Rating is: ";
+}
+
+/*
 TODO: Display the modal on winning the game
 Help with the modal from:
 https://www.w3schools.com/howto/howto_css_modals.asp
@@ -240,6 +266,7 @@ const modal = document.getElementById("modal");
 const modalClose = document.getElementsByClassName("close")[0];
 	// When the game is won set modal to display block to show it
 	modal.style.display= "block";
+
 	// When the user clicks on <span> (x), close the modal
 	modalClose.onclick = function() {
 		modal.style.display = "none";
