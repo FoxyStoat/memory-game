@@ -9,6 +9,8 @@ let opened = [];
 const matched = [];
 // Create variable for moves counter, start the count at one
 let moves = 0;
+// Variable to keep track of how many stars are left
+let starCount = 3;
 
 // Get the span tag for the timer.
 const timeCounter = document.querySelector(".timer");
@@ -223,9 +225,11 @@ const star = document.getElementById("star-rating").querySelectorAll(".star");
   if (moves === 14) {
   	// First element child is the <i> within the <li>
   	star[2].firstElementChild.classList.remove("fa-star");
+  	starCount--
   }
   if (moves === 18) {
   	star[1].firstElementChild.classList.remove("fa-star");
+  	starCount--
   }
 }
 
@@ -251,7 +255,7 @@ function AddStats() {
 			// Set the new <p> to have the content of stats (time, moves and star rating)
 		x[0].innerHTML = "Time to complete: " + minutes + " Minutes and " + seconds + " Seconds";
 		x[1].innerHTML = "Moves Taken: " + moves;
-		x[2].innerHTML = "Your Star Rating is: ";
+		x[2].innerHTML = "Your Star Rating is: " + starCount;
 }
 
 /*
