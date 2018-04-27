@@ -255,7 +255,7 @@ function AddStats() {
 			// Set the new <p> to have the content of stats (time, moves and star rating)
 		x[0].innerHTML = "Time to complete: " + minutes + " Minutes and " + seconds + " Seconds";
 		x[1].innerHTML = "Moves Taken: " + moves;
-		x[2].innerHTML = "Your Star Rating is: " + starCount;
+		x[2].innerHTML = "Your Star Rating is: " + starCount + " out of 3";
 }
 
 /*
