@@ -251,11 +251,11 @@ function AddStats() {
 	}
 
 	// Select all p tags with the class of stats and update the content
-	var x = stats.querySelectorAll("p.stats");
+	let p = stats.querySelectorAll("p.stats");
 			// Set the new <p> to have the content of stats (time, moves and star rating)
-		x[0].innerHTML = "Time to complete: " + minutes + " Minutes and " + seconds + " Seconds";
-		x[1].innerHTML = "Moves Taken: " + moves;
-		x[2].innerHTML = "Your Star Rating is: " + starCount + " out of 3";
+		p[0].innerHTML = "Time to complete: " + minutes + " Minutes and " + seconds + " Seconds";
+		p[1].innerHTML = "Moves Taken: " + moves;
+		p[2].innerHTML = "Your Star Rating is: " + starCount + " out of 3";
 }
 
 /*
