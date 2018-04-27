@@ -193,8 +193,18 @@ Deck of Cards
 	width: 7em;
 }
 
-.deck img {
+/*
+To disable the color highlight if and img is clicked
+*/
+img {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 	width: 6em;
+}
+
+.deck img {
 	visibility: hidden;
 }
 
