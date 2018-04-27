@@ -176,7 +176,7 @@ function movesCounter() {
 /*
 TODO: Check the length of the matched array and if there
 are 8 pairs 16 cards all together then the game is won.
-Stop the timer and show the modal
+Stop the timer update the modal with stats and show the modal
 */
 function winGame() {
 	if (matched.length === 16) {
