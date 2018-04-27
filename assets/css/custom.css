@@ -213,6 +213,7 @@ img {
 	cursor: default;
 	transform: rotateY(180deg);
 	transition: transform 0.3s linear;
+	pointer-events: none;
 }
 
 .flip img {
