@@ -164,6 +164,10 @@ https://www.w3schools.com/howto/howto_css_modals.asp
 	width: 20em;
 }
 
+p.stats {
+	font-weight: 600;
+}
+
 /*----------------------------------  
 Deck of Cards
 ------------------------------------*/
