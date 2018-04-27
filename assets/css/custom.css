@@ -160,7 +160,7 @@ https://www.w3schools.com/howto/howto_css_modals.asp
 /* Modal Image*/
 .modal-img {
 	display: inline-block;
-	margin-top: 2em;
+	margin: 2em 0 2em;
 	width: 20em;
 }
 
