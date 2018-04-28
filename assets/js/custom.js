@@ -10,6 +10,9 @@ let opened = [];
 // Create an empty array to store the matched cards
 let matched = [];
 
+// Access the reset button
+const reset = document.querySelector(".reset-btn");
+
 // Select the class moves-counter and change it's HTML  
 const movesCount = document.querySelector(".moves-counter");
 // Create variable for moves counter, start the count at one
