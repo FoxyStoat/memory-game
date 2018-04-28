@@ -4,11 +4,13 @@ const deckCards = ["Agility.png", "Agility.png", "Boat.png", "Boat.png", "Citize
 // Global Arrays
 // Access the <ul> with class of .deck
 const deck = document.querySelector(".deck");
-const cards = document.querySelector(".card");
 // Create an empty array to store the opened cards
 let opened = [];
 // Create an empty array to store the matched cards
 let matched = [];
+
+// Access the modal
+const modal = document.getElementById("modal");
 
 // Access the reset button
 const reset = document.querySelector(".reset-btn");
@@ -163,11 +165,11 @@ function starRating() {
 	if (moves === 14) {
 		// First element child is the <i> within the <li>
 		star[2].firstElementChild.classList.remove("fa-star");
-		starCount--
+		starCount--;
 	}
 	if (moves === 18) {
 		star[1].firstElementChild.classList.remove("fa-star");
-		starCount--
+		starCount--;
 	}
 }
 
@@ -260,8 +262,6 @@ Help with the modal from:
 https://www.w3schools.com/howto/howto_css_modals.asp
 */
 function displayModal() {
-// Access the modal
-const modal = document.getElementById("modal");
 // Access the modal <span> element (x) that closes the modal
 const modalClose = document.getElementsByClassName("close")[0];
 	// When the game is won set modal to display block to show it
@@ -270,13 +270,13 @@ const modalClose = document.getElementsByClassName("close")[0];
 	// When the user clicks on <span> (x), close the modal
 	modalClose.onclick = function() {
 		modal.style.display = "none";
-	}
+	};
 // When the user clicks anywhere outside of the modal, close it
 	window.onclick = function(event) {
 		if (event.target == modal) {
 			modal.style.display = "none";
 		}
-	}
+	};
 }
 
 /*
