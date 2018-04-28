@@ -45,6 +45,15 @@ ul > li {
 	cursor: pointer;
 }
 
+.btn {
+	border-radius: 1em;
+	border: none;
+	color: #fff;
+	box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+	margin-top: 1em;
+	padding: 1em;
+}
+
 /*----------------------------------  
 Header
 ------------------------------------*/
@@ -84,11 +93,6 @@ Section - Score Panel
 
 .reset-btn {
 	background: #000;
-	border-radius: 1em;
-	border: none;
-	color: #fff;
-	margin-top: 1em;
-	padding: 1em;
 }
 
 .timer-container {
@@ -164,6 +168,11 @@ https://www.w3schools.com/howto/howto_css_modals.asp
 
 p.stats {
 	font-weight: 600;
+}
+
+.play-again-btn {
+	background: #28e;
+	margin-bottom: 1em;
 }
 
 /*----------------------------------  
@@ -292,6 +301,10 @@ Media Queries
 	.modal-content h2 {
 		font-size: 4em;
 	}
+
+	.play-again-btn {
+		font-size: 1.8em;
+	}
 }
 
 /*---------------------------------- 
@@ -336,5 +349,9 @@ Desktops
 	/* Modal Image*/
 	.modal-img {
 		width: 30em;
+	}
+
+	.play-again-btn {
+		font-size: 2em;
 	}
 }
