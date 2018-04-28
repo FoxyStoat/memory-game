@@ -12,6 +12,8 @@ let matched = [];
 
 // Access the reset button
 const reset = document.querySelector(".reset-btn");
+// Access the play again button
+const playAgain = document.querySelector(".play-again-btn");
 
 // Select the class moves-counter and change it's HTML  
 const movesCount = document.querySelector(".moves-counter");
