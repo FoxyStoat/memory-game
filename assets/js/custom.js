@@ -293,7 +293,7 @@ const modalClose = document.getElementsByClassName("close")[0];
 
  /*
 TODO: Reset all global variables and the content of HTML elements
-timer, stars, moves, modal box data, moves and timer inner HTML
+timer, stars, moves, and the moves and timer inner HTML
 */
 function resetEverything() {
   // Stop time, reset the minutes and seconds update the time inner HTML
@@ -312,7 +312,9 @@ function resetEverything() {
   // Clear both arrays that hold the opened and matched cards
   matched = [];
   opened = [];
+  // Clear the deck
   removeCard();
+  // Create a new deck
   startGame();
 }
 
