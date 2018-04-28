@@ -142,8 +142,8 @@ https://www.w3schools.com/howto/howto_css_modals.asp
 	justify-content: center;
 	align-items: center;
 	background-color: #fff;
-	/* 15% from the top and centered */
-	margin: 15% auto;
+	/* 5% from the top and centered */
+	margin: 5% auto;
 	padding: 2em;
 	border: 0.8em solid #fc4;
 	width: 80%;
@@ -166,12 +166,16 @@ https://www.w3schools.com/howto/howto_css_modals.asp
 /* Modal Image*/
 .modal-img {
 	display: inline-block;
-	margin: 2em 0 2em;
+	margin: 1em 0 1em;
 	width: 20em;
 }
 
 p.stats {
 	font-weight: 600;
+}
+
+p.stats:last-child {
+	margin-bottom: 1em;
 }
 
 .play-again-btn {
