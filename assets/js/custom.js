@@ -312,6 +312,12 @@ function resetEverything() {
   opened = [];
 }
 
+ /*
+TODO: Event Listener to listen for a click on the reset
+button, once clicked call resetEverything()
+*/
+reset.addEventListener('click', resetEverything);
+
 // Debugging console.logs
 // console.log(matched.length);
 // console.log(opened);
