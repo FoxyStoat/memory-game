@@ -4,14 +4,24 @@ const deckCards = ["Agility.png", "Agility.png", "Boat.png", "Boat.png", "Citize
 // Global Arrays
 // Access the <ul> with class of .deck
 const deck = document.querySelector(".deck");
+const cards = document.querySelector(".card");
 // Create an empty array to store the opened cards
 let opened = [];
 // Create an empty array to store the matched cards
-const matched = []
+let matched = [];
+
+// Select the class moves-counter and change it's HTML  
+const movesCount = document.querySelector(".moves-counter");
 // Create variable for moves counter, start the count at one
 let moves = 0;
+
+// Access the <ul> element for the star rating section and then the <li> elements within it
+const star = document.getElementById("star-rating").querySelectorAll(".star");
 // Variable to keep track of how many stars are left
 let starCount = 3;
+
+// Get the span tag for the timer.
+const timeCounter = document.querySelector(".timer");
 // To use this variable to stop the time started in timer
 let time;
 // Create variables for time count, start all at zero
@@ -163,8 +173,6 @@ TODO: Increment the moves counter.  To be called at each
 comparison for every two cards compared add one to the count
 */
 function movesCounter() {
-	// Select the class moves-counter and change it's HTML  
-	const movesCount = document.querySelector(".moves-counter");
 	// Update the html for the moves counter
 	movesCount.innerHTML ++;
 	// Keep track of the number of moves for every pair checked
@@ -191,8 +199,6 @@ on the first card click
 Used: https://www.w3schools.com/js/js_timing.asp
 */
 function timer() {
-	// Get the span tag for the timer.
-	const timeCounter = document.querySelector(".timer");
 	// Update the count every 1 second
 	time = setInterval(function() {
 		seconds++;
@@ -220,8 +226,6 @@ moves the user completes the game, the stars will decrease
 with the more moves the user takes.
 */
 function starRating() {
-	// Access the <ul> element for the star rating section and then the <li> elements within it
-	const star = document.getElementById("star-rating").querySelectorAll(".star");
 	if (moves === 14) {
 		// First element child is the <i> within the <li>
 		star[2].firstElementChild.classList.remove("fa-star");
