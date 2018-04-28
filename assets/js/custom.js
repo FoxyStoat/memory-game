@@ -310,13 +310,27 @@ function resetEverything() {
   // Clear both arrays that hold the opened and matched cards
   matched = [];
   opened = [];
+  removeCard();
+  startGame();
 }
 
- /*
+/*
 TODO: Event Listener to listen for a click on the reset
 button, once clicked call resetEverything()
 */
 reset.addEventListener('click', resetEverything);
+
+/*
+TODO: Remove all child nodes from the deck <li> tags and
+<img> tags.  To be called in set everything function only
+*/
+function removeCard() {
+	// As long as <ul> deck has a child node, remove it
+	while (deck.hasChildNodes()) {   	
+		deck.removeChild(deck.firstChild);
+	}
+}
+
 
 // Debugging console.logs
 // console.log(matched.length);
