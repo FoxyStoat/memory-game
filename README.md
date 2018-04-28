@@ -10,6 +10,12 @@ All Images are taken from [GamePedia Wiki Pages](http://fallout.wikia.com/wiki/C
 
 ## Project Specifications
 
+### Screenshots of Working Game
+
+![Screenshot of working game in action](screenshot-memory-game.png "Screenshot of working game in action")
+
+![Screenshot of modal popup](screenshot-memory-game-modal.png "Screenshot of working game in action")
+
 
 ### Game Behavior
 
