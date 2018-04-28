@@ -51,13 +51,15 @@ function startGame() {
 	// Invoke shuffle function and store in variable
 	const shuffledDeck = shuffle(deckCards);
 	/* 
-	TODO: Create <img> tags and append
-	to <li> then add to deck <ul> with the new shuffled content
+	TODO: Create <li> tags and <img> tags and append
+ 	to the deck <ul> with the new shuffled content
 	*/ 
 	// Iterate over deck of cards array
 	for (let i = 0; i < shuffledDeck.length; i++) {
-		// Access the <li> with class of .card
-		const liTag = document.querySelector(".card");
+		// Create the <li> tags
+    const liTag = document.createElement('LI');
+    // Give <li> class of card
+    liTag.classList.add('card');
 		// Create the <img> tags
 		const addImage = document.createElement("IMG");
  		// Append <img> to <li>
