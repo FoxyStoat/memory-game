@@ -1,19 +1,17 @@
 // Array of Deck of Card Images
 const deckCards = ["Agility.png", "Agility.png", "Boat.png", "Boat.png", "Citizenship.png", "Citizenship.png", "Hack.png", "Hack.png", "Nerd-Rage.png", "Nerd-Rage.png", "Nuka-Cola.png", "Nuka-Cola.png", "Robotics.png", "Robotics.png", "Shock.png", "Shock.png"];
+
 // Global Arrays
 // Access the <ul> with class of .deck
 const deck = document.querySelector(".deck");
 // Create an empty array to store the opened cards
 let opened = [];
 // Create an empty array to store the matched cards
-const matched = [];
+const matched = []
 // Create variable for moves counter, start the count at one
 let moves = 0;
 // Variable to keep track of how many stars are left
 let starCount = 3;
-
-// Get the span tag for the timer.
-const timeCounter = document.querySelector(".timer");
 // To use this variable to stop the time started in timer
 let time;
 // Create variables for time count, start all at zero
@@ -37,7 +35,7 @@ function shuffle(array) {
 }
 
 function startGame() {
-	// Store new shuffled array to a new variable and call shuffle()
+	// Invoke shuffle function and store in variable
 	const shuffledDeck = shuffle(deckCards);
 	/* 
 	TODO: Create <img> tags and append
@@ -166,7 +164,7 @@ comparison for every two cards compared add one to the count
 */
 function movesCounter() {
 	// Select the class moves-counter and change it's HTML  
-	let movesCount = document.querySelector(".moves-counter");
+	const movesCount = document.querySelector(".moves-counter");
 	// Update the html for the moves counter
 	movesCount.innerHTML ++;
 	// Keep track of the number of moves for every pair checked
@@ -193,6 +191,8 @@ on the first card click
 Used: https://www.w3schools.com/js/js_timing.asp
 */
 function timer() {
+	// Get the span tag for the timer.
+	const timeCounter = document.querySelector(".timer");
 	// Update the count every 1 second
 	time = setInterval(function() {
 		seconds++;
@@ -220,17 +220,17 @@ moves the user completes the game, the stars will decrease
 with the more moves the user takes.
 */
 function starRating() {
-// Access the <ul> element for the star rating section and then the <li> elements within it
-const star = document.getElementById("star-rating").querySelectorAll(".star");
-  if (moves === 14) {
-  	// First element child is the <i> within the <li>
-  	star[2].firstElementChild.classList.remove("fa-star");
-  	starCount--
-  }
-  if (moves === 18) {
-  	star[1].firstElementChild.classList.remove("fa-star");
-  	starCount--
-  }
+	// Access the <ul> element for the star rating section and then the <li> elements within it
+	const star = document.getElementById("star-rating").querySelectorAll(".star");
+	if (moves === 14) {
+		// First element child is the <i> within the <li>
+		star[2].firstElementChild.classList.remove("fa-star");
+		starCount--
+	}
+	if (moves === 18) {
+		star[1].firstElementChild.classList.remove("fa-star");
+		starCount--
+	}
 }
 
 /*
@@ -249,7 +249,6 @@ function AddStats() {
 		// Add the new created <p> tag to the modal content
 		stats.appendChild(statsElement);
 	}
-
 	// Select all p tags with the class of stats and update the content
 	let p = stats.querySelectorAll("p.stats");
 			// Set the new <p> to have the content of stats (time, moves and star rating)
@@ -275,7 +274,6 @@ const modalClose = document.getElementsByClassName("close")[0];
 	modalClose.onclick = function() {
 		modal.style.display = "none";
 	}
-
 // When the user clicks anywhere outside of the modal, close it
 	window.onclick = function(event) {
 		if (event.target == modal) {
