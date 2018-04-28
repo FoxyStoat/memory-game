@@ -304,7 +304,7 @@ deck.addEventListener("click", function(evt) {
 		// To console if I was clicking the correct element 
 		console.log(evt.target.nodeName + " Was clicked");
 		// Start the timer after the first click of one card
-	// Executes the timer() function
+		// Executes the timer() function
 		if (timeStart === false) {
 			timeStart = true; 
 			timer();
