@@ -321,12 +321,6 @@ function resetEverything() {
 }
 
 /*
-TODO: Event Listener to listen for a click on the reset
-button, once clicked call resetEverything()
-*/
-reset.addEventListener('click', resetEverything);
-
-/*
 TODO: Remove all child nodes from the deck <li> tags and
 <img> tags.  To be called in set everything function only
 */
@@ -337,6 +331,23 @@ function removeCard() {
 	}
 }
 
+/*----------------------------------  
+Restart Buttons
+------------------------------------*/
+/*
+TODO: Event Listener to listen for a click on the reset
+button, once clicked call resetEverything()
+*/
+reset.addEventListener('click', resetEverything);
+
+/*
+TODO: Event Listener to listen for a click on the play
+again button, once clicked call resetEverything()
+*/
+playAgain.addEventListener('click',function() {
+  modal.style.display = "none";
+  resetEverything();
+});
 
 // Debugging console.logs
 // console.log(matched.length);
