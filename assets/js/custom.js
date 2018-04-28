@@ -289,6 +289,29 @@ const modalClose = document.getElementsByClassName("close")[0];
 	}
 }
 
+ /*
+TODO: Reset all global variables and the content of HTML elements
+timer, stars, moves, modal box data, moves and timer inner HTML
+*/
+function resetEverything() {
+  // Stop time, reset the minutes and seconds update the time inner HTML
+  stopTime();
+  timeStart = false;
+  seconds = 0;
+  minutes = 0;
+  timeCounter.innerHTML = "<i class='fa fa-hourglass-start'></i>" + " Timer: 00:00";
+  // Reset star count and the add the class back to show stars again
+  star[1].firstElementChild.classList.add("fa-star");
+  star[2].firstElementChild.classList.add("fa-star");
+  starCount = 3;
+  // Reset moves count and reset its inner HTML
+  moves = 0;
+  movesCount.innerHTML = 0;
+  // Clear both arrays that hold the opened and matched cards
+  matched = [];
+  opened = [];
+}
+
 // Debugging console.logs
 // console.log(matched.length);
 // console.log(opened);
