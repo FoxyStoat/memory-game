@@ -49,13 +49,13 @@ function shuffle(array) {
   return array;
 }
 
+/*
+TODO: Start Game: Shuffle the deck, create <li> tags and <img> 
+tags and append to the deck <ul> with the new shuffled content
+*/
 function startGame() {
 	// Invoke shuffle function and store in variable
-	const shuffledDeck = shuffle(deckCards);
-	/* 
-	TODO: Create <li> tags and <img> tags and append
- 	to the deck <ul> with the new shuffled content
-	*/ 
+	const shuffledDeck = shuffle(deckCards); 
 	// Iterate over deck of cards array
 	for (let i = 0; i < shuffledDeck.length; i++) {
 		// Create the <li> tags
@@ -74,7 +74,6 @@ function startGame() {
 		deck.appendChild(liTag);
 	}
 }
-startGame();
 
 /*
 TODO: Event Listener if a card <li> is clicked
@@ -330,6 +329,8 @@ function removeCard() {
 		deck.removeChild(deck.firstChild);
 	}
 }
+
+startGame();
 
 /*----------------------------------  
 Restart Buttons
