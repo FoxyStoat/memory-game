@@ -8,14 +8,13 @@ This is a project from Udacity here is the [repo link](https://github.com/udacit
 
 All Images are taken from [GamePedia Wiki Pages](http://fallout.wikia.com/wiki/Category:Vault_Boy_images) for the Fallout Games.  The images original source are created and owned by Bethesda Softworks.  The use of these images is believed to qualify as fair use for the purpose of creative work only.
 
-## Project Specifications
-
 ### Screenshots of Working Game
 
 ![Screenshot of working game in action](screenshot-memory-game.png "Screenshot of working game in action")
 
 ![Screenshot of modal popup](screenshot-memory-game-modal.png "Screenshot of working game in action")
 
+## Project Specifications
 
 ### Game Behavior
 
