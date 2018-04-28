@@ -70,7 +70,7 @@ Section - Score Panel
 
 .score-panel {
 	font-size: 1.6em;
-	padding: 2em;
+	padding: 1em 0 2em;
 }
 
 .star-rating > li {
