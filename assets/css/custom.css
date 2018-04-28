@@ -213,9 +213,6 @@ To disable the color highlight if and img is clicked
 https://stackoverflow.com/questions/21107439/disable-or-change-firefoxs-element-image-highlight-color
 */
 img {
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
 	user-select: none;
 	width: 6em;
 }
