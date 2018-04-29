@@ -19,7 +19,7 @@ const playAgain = document.querySelector(".play-again-btn");
 
 // Select the class moves-counter and change it's HTML  
 const movesCount = document.querySelector(".moves-counter");
-// Create variable for moves counter, start the count at one
+// Create variable for moves counter, start the count at zero
 let moves = 0;
 
 // Access the <ul> element for the star rating section and then the <li> elements within it
@@ -352,8 +352,6 @@ playAgain.addEventListener('click',function() {
 	modal.style.display = "none";
 	resetEverything();
 });
-
-
 
 // Debugging console.logs
 // console.log(matched.length);
