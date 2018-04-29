@@ -181,11 +181,11 @@ function compareTwo() {
 	if (opened.length === 2 && opened[0].src === opened[1].src) {
 		// If matched call match()
 		match();
-		console.log("It's a Match!");
+		// console.log("It's a Match!");
 	} else if (opened.length === 2 && opened[0].src != opened[1].src) {
 		// If No match call noMatch()
 		noMatch();
-		console.log("NO Match!");
+		// console.log("NO Match!");
 	}
 }
 
