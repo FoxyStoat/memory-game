@@ -14,6 +14,10 @@ All Images are taken from [GamePedia Wiki Pages](http://fallout.wikia.com/wiki/C
 
 ![Screenshot of modal popup](screenshot-memory-game-modal.png "Screenshot of working game in action")
 
+#### Link to game
+
+[try the game here](https://foxystoat.github.io/memory-game/)
+
 ## Project Specifications
 
 ### Game Behavior
