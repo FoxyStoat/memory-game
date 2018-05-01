@@ -177,6 +177,11 @@ function starRating() {
 TODO: Compare two cards to see if they match or not
 */
 function compareTwo() {
+	// When there are 2 cards in the opened array
+	if (opened.length === 2) {
+  		// Disable any further mouse clicks on other cards
+  		document.body.style.pointerEvents = "none";
+  	}
 	// Compare the two images src
 	if (opened.length === 2 && opened[0].src === opened[1].src) {
 		// If matched call match()
@@ -202,6 +207,8 @@ function match() {
 		opened[1].parentElement.classList.add("match");
 		// Push the matched cards to the matched array
 		matched.push(...opened);
+		// Allow for further mouse clicks on cards
+		document.body.style.pointerEvents = "auto";
 		// Check to see if the game has been won with all 8 pairs
 		winGame();
 		// Clear the opened array
@@ -224,6 +231,8 @@ function noMatch() {
 		// Remove class flip on images parent element
 		opened[0].parentElement.classList.remove("flip");
 		opened[1].parentElement.classList.remove("flip");
+		// Allow further mouse clicks on cards
+		document.body.style.pointerEvents = "auto";
 		// Remove the cards from opened array
 		opened = [];
 	}, 700);
@@ -315,8 +324,8 @@ deck.addEventListener("click", function(evt) {
 
 	//TODO: Flip the card and display cards img
 	function flipCard() {
-		// When <li> is clicked add the class .flip to show img
-		evt.target.classList.add("flip");
+      	// When <li> is clicked add the class .flip to show img
+		evt.target.classList.add("flip");	
 		// Call addToOpened() function
 		addToOpened();
 	}
